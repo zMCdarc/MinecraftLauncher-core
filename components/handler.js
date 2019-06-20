@@ -76,7 +76,7 @@ class Handler {
                 return;
             }
 
-            const manifest = "https://launchermeta.mojang.com/mc/game/version_manifest.json";
+            const manifest = "https://bmclapi2.bangbang93.com/mc/game/version_manifest.json";
             request.get(manifest, (error, response, body) => {
                 if (error) resolve(error);
 
@@ -111,7 +111,7 @@ class Handler {
 
     getAssets() {
         return new Promise(async(resolve) => {
-            const assetsUrl = 'https://resources.download.minecraft.net';
+            const assetsUrl = 'https://bmclapi2.bangbang93.com';
             const failed = [];
 
             if(!fs.existsSync(path.join(this.options.root, 'assets', 'indexes', `${this.version.assetIndex.id}.json`))) {
@@ -205,7 +205,7 @@ class Handler {
 
         const forge = require(path.join(this.options.root, 'forge', `${this.version.id}`, 'version.json'));
         const mavenUrl = 'http://files.minecraftforge.net/maven/';
-        const defaultRepo = 'https://libraries.minecraft.net/';
+        const defaultRepo = 'https://bmclapi2.bangbang93.com/';
         const paths = [];
 
         await Promise.all(forge.libraries.map(async library => {
