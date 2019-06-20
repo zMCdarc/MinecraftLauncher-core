@@ -1,6 +1,6 @@
 const request = require('request');
 const uuid = require('uuid/v1');
-const api_url = "https://authserver.mojang.com";
+const api_url = "https://account.xhyun.net/api/yggdrasil/authserver";
 
 module.exports.getAuth = function (username, password) {
     return new Promise(resolve => {
